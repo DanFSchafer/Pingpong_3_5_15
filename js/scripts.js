@@ -1,5 +1,5 @@
 
-var arrays1 = [];
+
 
 $(function() {
   $("#input form").submit(function(event) {
@@ -7,13 +7,14 @@ $(function() {
     $("#result").hide();
 
     var inputNum = parseInt($("input#inputNum").val());
-    console.log(inputNum);
+//  console.log(inputNum);
 
 //create array of numbers
+    var arrays1 = [];
     for (var index=1; index < inputNum + 1; index +=1) {
       arrays1.push(index);
     }
-    console.log(arrays1);
+//  console.log(arrays1);
 
 //replace array elements evenly divisible by 15 with "pingpong"
 //replace array elements evenly divisible by 3 with "ping"
@@ -30,9 +31,12 @@ $(function() {
       }
     });
 
-    console.log(arrays2);
+// console.log(arrays2);
 
-//list array of numbers as a unordered list
+//delete existing list
+    $("#theList").text("");
+
+//display array as an unordered list
     arrays2.forEach(function(array2) {
       $("#theList").append("<li>" + array2 + "</li>");
     });
