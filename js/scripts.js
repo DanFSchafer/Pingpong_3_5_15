@@ -4,6 +4,8 @@ var arrays1 = [];
 $(function() {
   $("#input form").submit(function(event) {
     event.preventDefault();
+    $("#result").hide();
+
     var inputNum = parseInt($("input#inputNum").val());
     console.log(inputNum);
 
@@ -13,11 +15,27 @@ $(function() {
     }
     console.log(arrays1);
 
-//list array of numbers as a unordered list
-    arrays1.forEach(function(array1) {
-      $("#theList").append("<li>" + array1 + "</li>");
+//replace array elements evenly divisible by 15 with "pingpong"
+//replace array elements evenly divisible by 3 with "ping"
+//replace array elements evenly divisible by 5 with "pong"
+    var arrays2 = arrays1.map(function(array1) {
+      if (array1 % 15 === 0) {
+        return "pingpong";
+      } else if (array1 % 3 === 0) {
+        return "ping";
+      } else if (array1 % 5 === 0) {
+        return "pong";
+      } else {
+        return array1;
+      }
     });
 
+    console.log(arrays2);
+
+//list array of numbers as a unordered list
+    arrays2.forEach(function(array2) {
+      $("#theList").append("<li>" + array2 + "</li>");
+    });
 
     $("#result").show();
   });
