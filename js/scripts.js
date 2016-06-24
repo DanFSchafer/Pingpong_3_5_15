@@ -1,10 +1,10 @@
 
 
 
+
 $(function() {
   $("#input form").submit(function(event) {
     event.preventDefault();
-    $("#result").hide();
 
     var inputNum = parseInt($("input#inputNum").val());
 //  console.log(inputNum);
@@ -14,11 +14,11 @@ $(function() {
     for (var index=1; index < inputNum + 1; index +=1) {
       arrays1.push(index);
     }
-//  console.log(arrays1);
+    //  console.log(arrays1);
 
-//replace array elements evenly divisible by 15 with "pingpong"
-//replace array elements evenly divisible by 3 with "ping"
-//replace array elements evenly divisible by 5 with "pong"
+    //replace array elements evenly divisible by 15 with "pingpong"
+    //replace array elements evenly divisible by 3 with "ping"
+    //replace array elements evenly divisible by 5 with "pong"
     var arrays2 = arrays1.map(function(array1) {
       if (array1 % 15 === 0) {
         return "pingpong";
@@ -33,10 +33,10 @@ $(function() {
 
 // console.log(arrays2);
 
-//delete existing list
+//delete existing list for multiple submissions
     $("#theList").text("");
 
-//display array as an unordered list
+//display resulting array elements as an unordered list
     arrays2.forEach(function(array2) {
       $("#theList").append("<li>" + array2 + "</li>");
     });
