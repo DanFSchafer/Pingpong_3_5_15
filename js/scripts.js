@@ -1,7 +1,4 @@
 
-
-
-
 $(function() {
   $("#input form").submit(function(event) {
     event.preventDefault();
@@ -34,6 +31,7 @@ $(function() {
 // console.log(arrays2);
 
 //delete existing list for multiple submissions
+    $("#result").hide();
     $("#theList").text("");
 
 //display resulting array elements as an unordered list
@@ -41,6 +39,6 @@ $(function() {
       $("#theList").append("<li>" + array2 + "</li>");
     });
 
-    $("#result").show();
+    $("#result").fadeIn();
   });
 });
