@@ -38,6 +38,12 @@ Contact danfschafer@gmail.com with bugs/RFEs.
 
 Just html, CSS, javascript, jQuery
 
+## Links to project
+
+GitHub Pages: http://danfschafer.github.io/Pingpong_3_5_15
+
+GitHub Repository: https://github.com/DanFSchafer/Pingpong_3_5_15
+
 ### License
 
 MIT
