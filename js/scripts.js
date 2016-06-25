@@ -38,7 +38,7 @@ $(function() {
     arrays2.forEach(function(array2) {
       $("#theList").append("<li>" + array2 + "</li>");
     });
-
+    $("body").css("background-image","url('img/pingpong1.png')");
     $("#result").fadeIn();
   });
 });

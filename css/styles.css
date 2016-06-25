@@ -1,7 +1,13 @@
 #result {
   display: none;
+  background-color: #BDBDBD;
 }
 
 h1 {
   color: #FFF500 !important;
+}
+
+body {
+  /*background-image: url("../img/pingpong1.png");*/
+  background-color: #BDBDBD;
 }
